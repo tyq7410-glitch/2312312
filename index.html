@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AURORA — CS2 Skin Studio</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brandmark">A</div><div><b>AURORA</b><small>SKIN STUDIO</small></div></div>
+    <div class="side-label">WORKSPACE</div>
+    <button class="nav active" data-page="catalog">◈ <span>Каталог скінів</span></button>
+    <button class="nav" data-page="loadout">▣ <span>Мої набори</span></button>
+    <button class="nav" data-page="favorites">♡ <span>Обране</span></button>
+    <div class="side-bottom"><div class="online-dot"></div><span>Visual-only mode</span><small>CS2 • AURORA 1.0</small></div>
+  </aside>
+  <main>
+    <header><div><div class="eyebrow">COUNTER-STRIKE 2 / COLLECTION</div><h1 id="pageTitle">Каталог скінів</h1></div><div class="header-right"><button id="fastMode" class="mode-btn" title="Перемкнути швидкий режим">⚡ Швидкий режим: ВИМК</button><span class="pill"><i></i> CATALOG ONLINE</span><button id="refresh" class="icon-btn" title="Оновити каталог">↻</button></div></header>
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow purple">AURORA SKIN STUDIO</div><h2>Створи свій<br><em>ідеальний інвентар.</em></h2><p>Досліджуй скіни, налаштовуй вигляд і збирай власні loadout-набори.</p><div class="hero-meta"><span>✦ Каталог CS2</span><span>✦ Пошук і фільтри</span><span>✦ Власні набори</span></div></div>
+      <div class="hero-art"><div class="orbit orbit1"></div><div class="orbit orbit2"></div><div class="hero-gun">✦</div><div class="hero-tag">AURORA<br><b>VISUAL LAB</b></div></div>
+    </section>
+    <section id="catalogPage">
+      <div class="toolbar"><div class="search"><span>⌕</span><input id="search" placeholder="Пошук зброї або скіна..."></div><select id="category"><option value="all">Усі категорії</option><option value="rifle">Гвинтівки</option><option value="pistol">Пістолети</option><option value="smg">Пістолети-кулемети</option><option value="sniper">Снайперські</option><option value="shotgun">Дробовики</option><option value="machinegun">Кулемети</option><option value="knife">Ножі</option><option value="glove">Рукавички</option><option value="agent">Агенти</option></select><select id="rarity"><option value="all">Уся рідкість</option><option>Consumer Grade</option><option>Industrial Grade</option><option>Mil-Spec Grade</option><option>Restricted</option><option>Classified</option><option>Covert</option><option>Extraordinary</option></select><select id="sort"><option value="name">За назвою</option><option value="rarity">За рідкістю</option></select></div>
+      <div class="stats"><span id="count">Завантаження каталогу…</span><span id="source">Дані каталогу завантажуються з відкритого джерела</span></div>
+      <div id="grid" class="grid"><div class="loading">Завантажуємо каталог CS2…</div></div>
+      <div class="pagination"><button id="prevPage" class="mini-btn" disabled>← Назад</button><span id="pageInfo">Сторінка 1</span><button id="nextPage" class="mini-btn" disabled>Далі →</button></div>
+    </section>
+    <section id="loadoutPage" hidden><div class="section-head"><div><h2>Мої набори</h2><p>Збережені комплекти для власних ідей.</p></div><button id="newLoadout" class="primary">＋ Створити набір</button></div><div id="loadouts" class="loadout-grid"></div></section>
+    <section id="favoritesPage" hidden><div class="section-head"><div><h2>Обране</h2><p>Скіни, які ти позначив зірочкою.</p></div></div><div id="favGrid" class="grid"></div></section>
+  </main>
+</div>
+<div id="modal" class="modal" hidden><div class="modal-card"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body></html>
