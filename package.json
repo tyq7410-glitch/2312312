@@ -1,39 +1,31 @@
 {
   "name": "aurora-skin-studio",
   "version": "2.1.1",
-  "description": "AURORA CS2 Skin Studio",
+  "description": "AURORA Skin Studio",
   "main": "main.js",
-  "author": "AURORA",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder --win nsis"
   },
   "devDependencies": {
-    "electron": "^34.0.0",
-    "electron-builder": "^25.1.8"
+    "electron": "^37.0.0",
+    "electron-builder": "^26.0.0"
   },
   "build": {
     "appId": "com.aurora.skinstudio",
     "productName": "AURORA Skin Studio",
-    "directories": {
-      "output": "dist"
-    },
     "files": [
       "main.js",
-      "index.html",
-      "style.css",
-      "app.js",
+      "public/**/*",
       "package.json"
     ],
     "win": {
-      "target": "nsis",
-      
+      "target": "nsis"
     },
     "nsis": {
       "oneClick": false,
       "perMachine": false,
       "allowToChangeInstallationDirectory": true
-    },
-    "publish": null
+    }
   }
 }
