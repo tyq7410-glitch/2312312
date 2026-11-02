@@ -1,6 +1,6 @@
 {
   "name": "aurora-skin-studio",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "AURORA Skin Studio",
   "main": "main.js",
   "scripts": {
@@ -16,7 +16,9 @@
     "productName": "AURORA Skin Studio",
     "files": [
       "main.js",
-      "public/**/*",
+      "index.html",
+      "app.js",
+      "style.css",
       "package.json"
     ],
     "win": {
